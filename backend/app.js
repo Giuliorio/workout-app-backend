@@ -1,9 +1,9 @@
 import express from 'express';
-import { workoutRouter, setRouter, exerciseRouter } from './routes';
+import { workoutRouter, setRouter, exerciseRouter } from './routes/index.js';
 
 const app = express();
 
-app.ise(express.json());
+app.use(express.json());
 
 app.use('/workouts', workoutRouter);
 app.use('/exercises', exerciseRouter);

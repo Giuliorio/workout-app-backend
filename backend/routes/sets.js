@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getSets, insertSet } from '../db';
+import { getSets, insertSet } from '../db/index.js';
 const setRouter = Router();
 
 setRouter.get('/', async (req, res) => {

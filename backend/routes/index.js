@@ -1,3 +1,3 @@
-export { default as workoutRouter } from './workouts';
-export { default as exerciseRouter } from './exercises';
-export { default as setRouter } from './sets';
+export { default as workoutRouter } from './workouts.js';
+export { default as exerciseRouter } from './exercises.js';
+export { default as setRouter } from './sets.js';

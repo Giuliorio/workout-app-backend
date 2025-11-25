@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getWorkouts, insertWorkout } from '../db';
+import { getWorkouts, insertWorkout } from '../db/index.js';
 const workoutRouter = Router();
 
 workoutRouter.get('/', async (req, res) => {

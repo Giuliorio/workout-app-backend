@@ -1,10 +1,10 @@
 import { Router } from 'express';
-import { getWorkouts, insertWorkout } from '../db';
+import { getExercises, insertExercise } from '../db/index.js';
 const workoutRouter = Router();
 
 workoutRouter.get('/', async (req, res) => {
   try {
-    const exercises = await getWorkouts();
+    const exercises = await getExercises();
     res.json(exercises);
   } catch (err) {
     console.error(err);
@@ -15,7 +15,7 @@ workoutRouter.get('/', async (req, res) => {
 workoutRouter.post('/', async (req, res) => {
   try {
     const { exerciseName } = req.body;
-    const newExercise = await insertWorkout(exerciseName);
+    const newExercise = await insertExercise(exerciseName);
     res.status(201).json(newExercise);
   } catch (err) {
     console.error(err);

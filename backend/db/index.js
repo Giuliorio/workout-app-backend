@@ -1,3 +1,3 @@
-export * from './workouts';
-export * from './exercises';
-export * from './sets';
+export * from './workouts.js';
+export * from './exercises.js';
+export * from './sets.js';
