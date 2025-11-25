@@ -1,5 +1,6 @@
 import express from 'express';
 import { workoutRouter, setRouter, exerciseRouter } from './routes/index.js';
+const port = process.env.PORT;
 
 const app = express();
 
@@ -9,12 +10,10 @@ app.use('/workouts', workoutRouter);
 app.use('/exercises', exerciseRouter);
 app.use('/sets', setRouter);
 
-const PORT = 3000;
-
-app.listen(PORT, (error) => {
+app.listen(port, (error) => {
   if (error) {
     throw error;
   }
 
-  console.log(`Server running on port: ${PORT}`);
+  console.log(`Server running on port: ${port}`);
 });
